@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+       <head>
+       <meta charset="UTF-8">
+       <title>Angular Maps</title>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js"></script>
+       <script src="ng-csv-0.3.6/build/ng-csv.js"></script>
+       <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+       <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+       <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+       <div ng-app="mapsApp" ng-controller="MapCtrl">
+       <div class="container">
+       <H3><strong><center> Mapa </center></strong></H3>
+       <!-- <pre> {{cities | json}}</pre> -->
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" ng-model="city" />
+        <label for="">Descripción</label>
+        <input type="text" class="form-control" ng-model="desc" />
+        <label for="">Latitud</label>
+        <input type="text" class="form-control" ng-model="lat" />
+        <label for="">Longitud</label>
+        <input type="text" class="form-control" ng-model="long" />
+        <br>
+        <button id="color1" class="pull-right btn btn-success" ng-click="agregarDireccion()">Nueva Dirección</button>
+      </div>
+    </div>
+           
+        <a id="color1" class="pull-center btn btn-success" ng-click="saveJSON()" ng-href="{{ url }}">GUARDAR EN ARCHIVO</a>
+   <br/>
+          <br / >  
+          <div id="map"></div> 
+          <br / >
+    
+
+   
+           
+
+           
+  </div>
+</div> 
+    
+        <script src="js/index.js"></script>
+
+    
+    
+  </body>
+</html>
